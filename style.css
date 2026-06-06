@@ -1,0 +1,60 @@
+body{
+    background-color: black;
+    padding: 0.5rem;
+}
+
+
+
+button{
+     
+    background-color:lightgoldenrodyellow;
+    font-style: normal;
+    color:black;
+    padding: 0.2rem;
+
+     
+   
+}
+
+li{
+   
+    padding:  1rem;
+    margin: 1rem;
+    color:white;
+   
+
+
+
+    
+
+    
+}
+.container{
+    max-width:37rem;
+    margin:0 auto;
+    /* background-color: black; */
+    padding: 1rem; 
+    width:100%;
+    text-align: center;
+    
+}
+
+h1{
+color: white; 
+   display:inline-block
+}
+h2{
+color:white
+}
+input{
+    border-color: rgb(19, 54, 54);
+    flex:1;
+}
+
+.todo-item{
+    display:flex;
+    justify-content: center;
+    gap:0.5rem;
+flex-wrap: wrap;
+}
+
