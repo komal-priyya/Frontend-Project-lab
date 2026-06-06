@@ -22,12 +22,7 @@ li{
     margin: 1rem;
     color:white;
    
-
-
-
-    
-
-    
+   
 }
 .container{
     max-width:37rem;
@@ -56,5 +51,9 @@ input{
     justify-content: center;
     gap:0.5rem;
 flex-wrap: wrap;
+}
+
+.done{
+    text-decoration: line-through;
 }
 

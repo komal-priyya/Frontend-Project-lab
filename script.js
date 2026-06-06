@@ -12,35 +12,67 @@ btn.addEventListener("click", (e) => {
     const li = document.createElement("li")
     const done = document.createElement("button")
     const Edit = document.createElement("button")
-    const Pending = document.createElement("button")
-
+    const Delete = document.createElement("button")
+const span= document.createElement("span")
 
 
     if (input.value === '') return
 
-    li.textContent = input.value
+    span.textContent = input.value
     done.textContent = "Done"
     Edit.textContent = "Edit"
-    Pending.textContent = "Pending"
+    Delete.textContent = "delete"
 
 
 
      done.addEventListener("click", () => {
-    li.style.textDecoration = "line-through"
-    li.style.color = "red"
+        
+    span.style.textDecoration = "line-through"
+    span.style.color = "red"
+    done.textContent="undone"
+  
+
+
+    done.addEventListener("click", () =>{
+        done.textContent="done"
+    })
   })
 
     done.classList.add("dn-btn")
     Edit.classList.add("dn-btn")
-    Pending.classList.add("dn-btn")
+    Delete.classList.add("dn-btn")
 
+
+//  Edit.addEventListener( "click" ,() => {
+//     const   isDone =    
+
+
+
+//     })
+
+
+
+
+done.addEventListener("click", () => {
+  const li = done.parentElement;         // step up to li
+  const span = li.querySelector("span"); // step across to span
+  
+  const isDone = span.classList.toggle("done");
+  done.textContent = isDone ? "Undone" : "Done";
+  
+});
 
 li.classList.add('todo-item')
     const ul = document.querySelector("ul")
-    li.append(done, Edit, Pending)
+    li.append(span ,done, Edit, Delete)
     ul.append(li)
     input.value = ""
+
+
+   
 })
+
+
 
 
 
