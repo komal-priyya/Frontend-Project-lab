@@ -6,14 +6,14 @@ const btn = document.querySelector(".add-btn")
 console.log(document.querySelector("button"))
 
 console.log(input.value)
-   
+
 
 btn.addEventListener("click", (e) => {
     const li = document.createElement("li")
     const done = document.createElement("button")
     const Edit = document.createElement("button")
     const Delete = document.createElement("button")
-const span= document.createElement("span")
+    const span = document.createElement("span")
 
 
     if (input.value === '') return
@@ -25,51 +25,45 @@ const span= document.createElement("span")
 
 
 
-     done.addEventListener("click", () => {
-        
-    span.style.textDecoration = "line-through"
-    span.style.color = "red"
-    done.textContent="undone"
-  
+    done.classList.add("dn-btn")
+    Edit.classList.add("dn-btn")
+    Delete.classList.add("dn-btn")
 
 
-    done.addEventListener("click", () =>{
-        done.textContent="done"
-    })
-  })
+    //  Edit.addEventListener( "click" ,() => {
+    //     const   isDone =    
+
+
+
+    //     })
+
+
+
+
+    done.addEventListener("click", () => {
+        const li = done.parentElement;         // step up to li
+        const span = li.querySelector("span"); // step across to span
+
+        const isDone = span.classList.toggle("done");
+        done.textContent = isDone ? "Undone" : "Done";
+        console.log("first")
+    });
+
+
 
     done.classList.add("dn-btn")
     Edit.classList.add("dn-btn")
     Delete.classList.add("dn-btn")
 
 
-//  Edit.addEventListener( "click" ,() => {
-//     const   isDone =    
-
-
-
-//     })
-
-
-
-
-done.addEventListener("click", () => {
-  const li = done.parentElement;         // step up to li
-  const span = li.querySelector("span"); // step across to span
-  
-  const isDone = span.classList.toggle("done");
-  done.textContent = isDone ? "Undone" : "Done";
-  
-});
-
-li.classList.add('todo-item')
+    li.classList.add('todo-item')
     const ul = document.querySelector("ul")
-    li.append(span ,done, Edit, Delete)
+    li.append(span, done, Edit, Delete)
     ul.append(li)
     input.value = ""
 
 
-   
+
 })
 
 
