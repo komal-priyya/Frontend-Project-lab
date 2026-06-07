@@ -30,12 +30,8 @@ btn.addEventListener("click", (e) => {
     Delete.classList.add("dn-btn")
 
 
-    //  Edit.addEventListener( "click" ,() => {
-    //     const   isDone =    
 
 
-
-    //     })
 
 
 
@@ -48,6 +44,44 @@ btn.addEventListener("click", (e) => {
         done.textContent = isDone ? "Undone" : "Done";
         console.log("first")
     });
+
+
+    let isediting = false
+    const editInput = null
+    Edit.addEventListener("click", () => {
+
+        if (!isediting) {
+            const currentText = span.textContent
+            EditInput = document.createElement("input")
+            EditInput.value = currentText;
+            EditInput.type = "text";
+
+            span.replaceWith(EditInput)
+
+            Edit.textContent = "Save"
+            isediting = true;
+        }
+        else {
+            if (EditInput.value === '') return
+
+            console.log("first")
+            span.textContent = EditInput.value;
+            EditInput.replaceWith(span)
+
+            Edit.textContent = "Edit"
+            console.log(span.textContent)
+            isediting = false;
+        }
+
+
+    })
+
+    Delete.addEventListener( "click",() =>{
+
+li.remove()
+
+
+    })
 
 
 
@@ -65,7 +99,6 @@ btn.addEventListener("click", (e) => {
 
 
 })
-
 
 
 
