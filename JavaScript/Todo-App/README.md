@@ -54,9 +54,16 @@ The goal is to build a strong foundation in frontend development before moving i
 ```text
 frontend-project-lab/
 │
-├── day-01-Todo-App
+├── javascript/
+|   | 
+│   ├── todo-app/
+     │
+     ├── index.html
+     ├── style.css
+     ├── script.js
+     └── README.md
 
-333
+
 
 ```
 
@@ -66,9 +73,9 @@ frontend-project-lab/
 
 ### Week 1 – JavaScript
 
-| Day | Project                 |
-| --- | ----------------------- |
-| 1   | Todo App                |
+| Day   | Project                 |
+| ---   | ----------------------- |
+| 1 -2  | Todo App                |
            
 
 
