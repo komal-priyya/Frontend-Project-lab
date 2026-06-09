@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+      background-color: black;
+    padding: 0.5rem;
+    font-size: 16px;
+    min-height: 100vh;
+}
+li{
+    padding: 0.5rem 2rem; 
+     /* width:100%; */
+     border-radius:1rem;
+background-color: aliceblue;
+     color: black;
+     list-style-type: style;
+     height:44px;
+
+
+}
+.container{
+    color:white;
+    margin: 0 auto;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 0.6rem;
+}
+
+button{
+     border-radius: 0.5rem;
+        padding: 0.5rem;
+       
+    cursor: pointer;
+font-size: 0.9rem;
+border-radius:6px;
+/* margin:3rem; */
+
+}
+
+
+.delBtn{
+    border-radius: 0.5rem;
+        padding: 0.5rem;
+       border-color: azure;
+    cursor: pointer;
+font-size: 0.9rem;
+border-radius:6px;
+margin:3rem; background-color: rgb(93, 76, 76); 
+}
+.div{
+    display:flex;
+    gap: 0.2rem;
+    
+
+}
+
+ul{
+    display:flex;
+    flex-direction:column;
+    gap:0.5rem;
+    margin:1rem
+}
