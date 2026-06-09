@@ -17,8 +17,8 @@ li{
      border-radius:1rem;
 background-color: aliceblue;
      color: black;
-     list-style-type: style;
-     height:44px;
+     list-style-type: none;
+     
 
 
 }
@@ -30,6 +30,8 @@ background-color: aliceblue;
      justify-content: center;
      align-items: center;
      gap: 0.6rem;
+     width: 100%;
+     max-width: 500px
 }
 
 button{
@@ -38,20 +40,19 @@ button{
        
     cursor: pointer;
 font-size: 0.9rem;
-border-radius:6px;
 /* margin:3rem; */
 
 }
 
 
-.delBtn{
+.Btn{
     border-radius: 0.5rem;
         padding: 0.5rem;
        border-color: azure;
     cursor: pointer;
 font-size: 0.9rem;
-border-radius:6px;
-margin:3rem; background-color: rgb(93, 76, 76); 
+margin-left: 0.5rem;
+ background-color: rgb(93, 76, 76); 
 }
 .div{
     display:flex;

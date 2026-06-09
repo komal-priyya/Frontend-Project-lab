@@ -27,12 +27,26 @@ GenBtn.addEventListener("click", () => {
     const ul = document.querySelector("ul")
     const li = document.createElement("li")
         const Delete = document.createElement("button")
-
+const copy = document.createElement("button")
     const div = document.createElement("div")
+
+    copy.innerText="copy"
     div.classList.add("div")
-    Delete.classList.add("delBtn")
+    Delete.classList.add("Btn")
     console.log(password)
     Delete.innerText = "delete"
+
+
+
+
+    Delete.addEventListener("click", () =>{
+        li.remove()
+        Delete.remove()
+    })
+
+    copy.addEventListener("click", ()=>{
+        navigator.clipboard.writeText(password)
+    })
     // .append(ul)
     console.log(Delete)
     li.innerText = password;
