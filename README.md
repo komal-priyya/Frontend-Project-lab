@@ -54,17 +54,21 @@ The goal is to build a strong foundation in frontend development before moving i
 ```text
 frontend-project-lab/
 │
-├── javascript/
-│   ├── Todo-app/
+├── Javascript/
+│   ├──ColorPalatte-Generator/
 |    ├── index.html
 |    ├── style.css
 |    ├── script.js
 |    |
-|   ├── Color-Palatte-Generator/
+|   ├── Password-Generator/
 |    ├── index.html
 |    ├── style.css
 |    ├── script.js
- 
+|    |
+|   ├── Todo-App/
+|    ├── index.html
+|    ├── style.css
+|    ├── script.js─ 
 
 
 
@@ -80,7 +84,7 @@ frontend-project-lab/
 | ---   | ----------------------- |
 | 1 -2  | Todo App                |
 | 3     | Color-Palatte-Generator |
-           
+| 4     |  Password-Generator     |         
 
 
 
