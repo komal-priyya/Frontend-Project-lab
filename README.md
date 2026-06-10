@@ -65,10 +65,15 @@ frontend-project-lab/
 |    ├── style.css
 |    ├── script.js
 |    |
+|   ├── Quiz-App/
+|    ├── index.html
+|    ├── style.css
+|    ├── script.js
+|    |
 |   ├── Todo-App/
 |    ├── index.html
 |    ├── style.css
-|    ├── script.js─ 
+|    ├── script.js─
 
 
 
@@ -84,7 +89,8 @@ frontend-project-lab/
 | ---   | ----------------------- |
 | 1 -2  | Todo App                |
 | 3     | Color-Palatte-Generator |
-| 4     |  Password-Generator     |         
+| 4     |  Password-Generator     |  
+|5,6    |  Quiz App               | 
 
 
 
