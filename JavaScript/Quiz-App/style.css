@@ -1,0 +1,32 @@
+.div-box{
+
+
+    background-color: aqua;
+}
+
+.container{
+    width:100vw;
+    height:100vh ;
+
+    display:flex;
+    flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  background-color: aqua;
+  
+
+}
+
+.quiz-box{
+    background-color: rgb(64, 158, 255);
+    width:100%;
+    text-align: center;
+    padding: 0.2rem;
+   
+}
+.ques-box{
+
+ margin: 2rem;
+
+}
+
