@@ -38,7 +38,7 @@ for (let i = 0; i < options.length; i++) {
     console.log(li)
 
 
-// }
+}
 const NextBtn = document.createElement("button")
 const BackBtn = document.createElement("button")
 BackBtn.innerText = "BACK"
@@ -49,29 +49,44 @@ span.innerText = Data[currentQuestion].Question
 
 const nextDiv = document.createElement("div")
 const contDiv = document.querySelector(".container")
-NextBtn.addEventListener("click", () => {
-    currentQuestion++
 
-    options
-    ul.innerHTML = ''
-    span.innerText = Data[currentQuestion].Question
-// let options = Data[currentQuestion].options
+function renderQuestion() {
+    span.innerText = Data[currentQuestion].Question;
+    ul.innerHTML = "";
+
+    let options = Data[currentQuestion].options;
 
     for (let i = 0; i < options.length; i++) {
-        let li = document.createElement("li")
-        li.innerText = options[i]
-        ul.append(li)
+        let li = document.createElement("li");
+        li.innerText = options[i];
+        ul.append(li);
+    }
+}
 
 
 
 
+
+
+    NextBtn.addEventListener("click", () => {
+        if(currentQuestion<DataTransfer.length-1)
+        renderQuestion()
+        currentQuestion++
+    })
+    
+BackBtn.addEventListener("click", () => {
+    if(currentQuestion>0){
+
+  currentQuestion--      
+renderQuestion()
 
     }
-
-})
+    })
 
 
 
 const div = document.querySelector(".container")
 div.append(quesDiv)
 quesDiv.append(span, ul, BackBtn, NextBtn)
+
+
