@@ -38,7 +38,7 @@ for (let i = 0; i < options.length; i++) {
     console.log(li)
 
 
-}
+// }
 const NextBtn = document.createElement("button")
 const BackBtn = document.createElement("button")
 BackBtn.innerText = "BACK"
@@ -55,6 +55,7 @@ NextBtn.addEventListener("click", () => {
     options
     ul.innerHTML = ''
     span.innerText = Data[currentQuestion].Question
+// let options = Data[currentQuestion].options
 
     for (let i = 0; i < options.length; i++) {
         let li = document.createElement("li")
