@@ -28,6 +28,7 @@ let quesDiv = document.querySelector(".ques-box")
 let span = document.createElement("span")
 let ul = document.createElement("ul")
 let li = document.createElement("li")
+let progressDiv= document.createElement('div')
 
 
 let options = Data[currentQuestion].options
@@ -48,6 +49,10 @@ BackBtn.innerText = "BACK"
 NextBtn.innerText = "NEXT"
 NextBtn.classList.add("next-btn")
 BackBtn.classList.add("back-btn")
+const RestartBtn = document.createElement("button")
+RestartBtn.innerText="RESTART"
+RestartBtn.classList.add("restart-btn")
+RestartBtn.classList.add("restart-btn")
 quesBox.append(NextBtn)
 span.innerText = Data[currentQuestion].Question
 
@@ -104,10 +109,10 @@ NextBtn.addEventListener("click", () => {
     }
 
 
-    if (selectedAnswer === "") {
-        alert("Please select an answer");
-        return;
-    }
+    // if (selectedAnswer === "") {
+    //     alert("Please select an answer");
+    //     return;
+    // }
 
     if (currentQuestion < Data.length - 1)
         currentQuestion++
@@ -140,7 +145,7 @@ SubmitBtn.addEventListener("click", () => {
 
 const div = document.querySelector(".container")
 div.append(quesDiv)
-quesDiv.append(span, ul, BackBtn, NextBtn, SubmitBtn)
+quesDiv.append(span, ul, BackBtn, NextBtn, SubmitBtn,RestartBtn)
 renderQuestion();
 
 

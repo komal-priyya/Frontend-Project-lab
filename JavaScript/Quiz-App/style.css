@@ -23,6 +23,7 @@ body{
 }
 
 .quiz-box{
+    margin: 1rem;
     width: 100%;
     text-align: center;
         background: rgb(42, 83, 118);
@@ -30,15 +31,16 @@ body{
 }
 
 .ques-box{
-    width: 100%;
-    padding: 1rem;
-    box-sizing: border-box;
-
+    width: 100%; padding: 1rem; box-sizing: border-box;
+    background-color: black;
 }
 
 button{
     padding: 10px 20px;
     font-size: 1rem;
+    border-style:groove;
+    border-radius: 0.5rem;
+    
 }
 
 .back-btn{
@@ -69,5 +71,8 @@ li{
 
 
 .submit-btn{
+    margin: 0.8rem;
+}
+.restart-btn{
     margin: 0.8rem;
 }
