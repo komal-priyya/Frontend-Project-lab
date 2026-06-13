@@ -46,6 +46,7 @@ SubmitBtn.classList.add('submit-btn')
 SubmitBtn.innerText = 'SUBMIT'
 BackBtn.innerText = "BACK"
 NextBtn.innerText = "NEXT"
+NextBtn.classList.add("next-btn")
 BackBtn.classList.add("back-btn")
 quesBox.append(NextBtn)
 span.innerText = Data[currentQuestion].Question
@@ -66,17 +67,24 @@ function renderQuestion() {
         let li = document.createElement("li");
         li.innerText = options[i];
 
+        
         li.addEventListener("click", () => {
+console.log("Selected:", selectedAnswer);
+if(selectedAnswer!== Data[currentQuestion].correctAnswer){
+li.style.backgroundColor
+}
 
             selectedAnswer = options[i];
-    // let allOptions = ul.querySelectorAll("li");
-    //     allOptions.forEach(option => {
-    //         option.style.backgroundColor = "";
-    //         });   
-    //         li.style.backgroundColor = ''
-                console.log(selectedAnswer); // check in console
+    let allOptions = ul.querySelectorAll("li");
+        allOptions.forEach(option => {
+            option.style.backgroundColor = "";
+            });   
+            li.style.backgroundColor = 'lightgreen'
+                console.log(selectedAnswer); 
 
         })
+
+
         ul.append(li);
     }
 }
@@ -87,14 +95,19 @@ NextBtn.addEventListener("click", () => {
 
     if (selectedAnswer === Data[currentQuestion].correctAnswer) {
         score++;
-    } selectedAnswer = "";
-
+    } 
+    
+  
+if(selectedAnswer === ""){
+    alert("Please select an answer");
+    return;
+}
 
     if (currentQuestion < Data.length - 1)
         currentQuestion++
     renderQuestion()
 
-
+  selectedAnswer = "";
 
 })
 
@@ -122,6 +135,7 @@ SubmitBtn.addEventListener("click", () => {
 const div = document.querySelector(".container")
 div.append(quesDiv)
 quesDiv.append(span, ul, BackBtn, NextBtn, SubmitBtn)
+renderQuestion();
 
 
 
