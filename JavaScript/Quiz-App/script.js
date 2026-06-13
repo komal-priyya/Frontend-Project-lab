@@ -53,8 +53,8 @@ span.innerText = Data[currentQuestion].Question
 
 const nextDiv = document.createElement("div")
 const contDiv = document.querySelector(".container")
-        let selectedAnswer = ''
-        let score = 0
+let selectedAnswer = ''
+let score = 0
 function renderQuestion() {
 
 
@@ -67,20 +67,26 @@ function renderQuestion() {
         let li = document.createElement("li");
         li.innerText = options[i];
 
-        
-        li.addEventListener("click", () => {
-console.log("Selected:", selectedAnswer);
-if(selectedAnswer!== Data[currentQuestion].correctAnswer){
-li.style.backgroundColor
-}
 
-            selectedAnswer = options[i];
-    let allOptions = ul.querySelectorAll("li");
-        allOptions.forEach(option => {
-            option.style.backgroundColor = "";
-            });   
-            li.style.backgroundColor = 'lightgreen'
-                console.log(selectedAnswer); 
+        li.addEventListener("click", () => {
+           selectedAnswer = options[i];
+            
+           
+            let allOptions = ul.querySelectorAll("li");
+            allOptions.forEach(option => {
+                option.style.backgroundColor = "";
+            });
+
+
+          if(selectedAnswer === Data[currentQuestion].correctAnswer){
+        li.style.backgroundColor = "lightgreen";
+                li.style.border='white'
+
+    } else {
+        li.style.backgroundColor = "red";
+        li.style.border='white'
+    }
+            console.log(selectedAnswer);
 
         })
 
@@ -95,19 +101,19 @@ NextBtn.addEventListener("click", () => {
 
     if (selectedAnswer === Data[currentQuestion].correctAnswer) {
         score++;
-    } 
-    
-  
-if(selectedAnswer === ""){
-    alert("Please select an answer");
-    return;
-}
+    }
+
+
+    if (selectedAnswer === "") {
+        alert("Please select an answer");
+        return;
+    }
 
     if (currentQuestion < Data.length - 1)
         currentQuestion++
     renderQuestion()
 
-  selectedAnswer = "";
+    selectedAnswer = "";
 
 })
 
@@ -122,7 +128,7 @@ BackBtn.addEventListener("click", () => {
 
 SubmitBtn.addEventListener("click", () => {
 
-    if(selectedAnswer === Data[currentQuestion].correctAnswer){
+    if (selectedAnswer === Data[currentQuestion].correctAnswer) {
         score++;
     }
 
