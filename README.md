@@ -90,7 +90,7 @@ frontend-project-lab/
 | 1 -2  | Todo App                |
 | 3     | Color-Palatte-Generator |
 | 4     |  Password-Generator     |  
-|5,6    |  Quiz App               | 
+|5,6,7,8|  Quiz App               | 
 
 
 
