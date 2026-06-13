@@ -21,13 +21,15 @@
 .quiz-box{
     width: 100%;
     text-align: center;
+        background: rgb(42, 83, 118);
+
 }
 
 .ques-box{
     width: 100%;
     padding: 1rem;
     box-sizing: border-box;
-    background: aliceblue;
+
 }
 
 button{
@@ -41,4 +43,7 @@ button{
 li{
     list-style-type:circle;
     
+}
+.submit-btn{
+    margin: 1rem;
 }

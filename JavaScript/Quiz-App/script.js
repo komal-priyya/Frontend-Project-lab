@@ -41,6 +41,9 @@ for (let i = 0; i < options.length; i++) {
 }
 const NextBtn = document.createElement("button")
 const BackBtn = document.createElement("button")
+const SubmitBtn = document.createElement("button")
+SubmitBtn.classList.add('submit-btn')
+SubmitBtn.innerText = 'SUBMIT'
 BackBtn.innerText = "BACK"
 NextBtn.innerText = "NEXT"
 BackBtn.classList.add("back-btn")
@@ -49,8 +52,11 @@ span.innerText = Data[currentQuestion].Question
 
 const nextDiv = document.createElement("div")
 const contDiv = document.querySelector(".container")
-
+        let selectedAnswer = ''
+        let score = 0
 function renderQuestion() {
+
+
     span.innerText = Data[currentQuestion].Question;
     ul.innerHTML = "";
 
@@ -59,34 +65,67 @@ function renderQuestion() {
     for (let i = 0; i < options.length; i++) {
         let li = document.createElement("li");
         li.innerText = options[i];
+
+        li.addEventListener("click", () => {
+
+            selectedAnswer = options[i];
+    // let allOptions = ul.querySelectorAll("li");
+    //     allOptions.forEach(option => {
+    //         option.style.backgroundColor = "";
+    //         });   
+    //         li.style.backgroundColor = ''
+                console.log(selectedAnswer); // check in console
+
+        })
         ul.append(li);
     }
 }
 
 
 
+NextBtn.addEventListener("click", () => {
+
+    if (selectedAnswer === Data[currentQuestion].correctAnswer) {
+        score++;
+    } selectedAnswer = "";
 
 
-
-    NextBtn.addEventListener("click", () => {
-        if(currentQuestion<DataTransfer.length-1)
-        renderQuestion()
+    if (currentQuestion < Data.length - 1)
         currentQuestion++
-    })
-    
-BackBtn.addEventListener("click", () => {
-    if(currentQuestion>0){
+    renderQuestion()
 
-  currentQuestion--      
-renderQuestion()
+
+
+})
+
+BackBtn.addEventListener("click", () => {
+    if (currentQuestion > 0) {
+
+        currentQuestion--
+        renderQuestion()
 
     }
-    })
+})
 
+SubmitBtn.addEventListener("click", () => {
 
+    if(selectedAnswer === Data[currentQuestion].correctAnswer){
+        score++;
+    }
+
+    quesDiv.innerHTML = `
+        <h2>Quiz Finished!</h2>
+        <p>Your Score: ${score} / ${Data.length}</p>
+    `;
+});
 
 const div = document.querySelector(".container")
 div.append(quesDiv)
-quesDiv.append(span, ul, BackBtn, NextBtn)
+quesDiv.append(span, ul, BackBtn, NextBtn, SubmitBtn)
+
+
+
+
+
 
 
