@@ -55,6 +55,11 @@ The goal is to build a strong foundation in frontend development before moving i
 frontend-project-lab/
 │
 ├── Javascript/
+|  ├── Calculator/
+|    ├── index.html
+|    ├── style.css
+|    ├── script.js
+    
 │   ├──ColorPalatte-Generator/
 |    ├── index.html
 |    ├── style.css
@@ -73,7 +78,7 @@ frontend-project-lab/
 |   ├── Todo-App/
 |    ├── index.html
 |    ├── style.css
-|    ├── script.js─
+|    ├── script.js
 
 
 
@@ -91,6 +96,7 @@ frontend-project-lab/
 | 3     | Color-Palatte-Generator |
 | 4     |  Password-Generator     |  
 |5,6,7,8|  Quiz App               | 
+| 9     |  Calculator             |
 
 
 
