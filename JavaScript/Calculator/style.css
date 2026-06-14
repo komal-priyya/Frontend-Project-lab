@@ -1,3 +1,19 @@
 .container{
-    
+     width:300px;
+     margin:50px auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+}
+
+.display {
+  grid-column: span 4;
+  padding: 15px;
+  font-size: 24px;
+}
+
+button {
+  padding: 20px;
+  font-size: 20px;
+  cursor: pointer;
 }
