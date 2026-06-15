@@ -96,7 +96,7 @@ frontend-project-lab/
 | 3     | Color-Palatte-Generator |
 | 4     |  Password-Generator     |  
 |5,6,7,8|  Quiz App               | 
-| 9     |  Calculator             |
+| 9 ,10 |  Calculator             |
 
 
 
