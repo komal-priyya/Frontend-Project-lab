@@ -11,7 +11,7 @@ async function getData(url){
   return data  
 }
 
-getData();
+// getData();
 
 button.addEventListener("click" , async ()=>{
 const city= cityInput.value
