@@ -81,7 +81,6 @@ showRecentCities();
     //     cities.push(city);
     // }
 
-    // // Keep only last 5 cities
     // if (cities.length > 5) {
     //     cities.shift();
     // }
