@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+}
+
+.container {
+    width: 90%;
+    max-width:400px;
+     
+
+    padding: 30px;
+    border-radius: 20px;
+    background: white;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input {
+    width: 70%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    background: #4f46e5;
+    color: white;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #4338ca;
+}
+
+
+
+.cityname {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.temp {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff6b35;
+    margin-bottom: 10px;
+}
+
+.humidity,
+.wind-speed,
+.date-time {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #555;
+}
+
+.date-time {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 15px;
+}
+.input-box {
+    position: relative;
+    width: 250px;
+    margin: auto;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 35px 10px 10px;
+}
+
+.clear-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: gray;
+    display: none;
+}
+.weather-icon{
+    width:100px;
+    height:100px;
+    display: none;
+    margin: 0 auto;
+}
+@media (max-width: 480px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .cityname {
+        font-size: 1.5rem;
+    }
+
+    .temp {
+        font-size: 1.3rem;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+.recent-searches {
+    display: flex;
+    gap: 10px;              
+    flex-wrap: wrap;        
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.recent-searches button {
+    padding: 10px 20px;
+    border-radius: 15px;
+}
