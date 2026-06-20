@@ -79,7 +79,13 @@ frontend-project-lab/
 |    ├── index.html
 |    ├── style.css
 |    ├── script.js
+|    |
 |   ├── Weather-App/
+|    ├── index.html
+|    ├── style.css
+|    ├── script.js
+|    | 
+|   ├── Notes-App/
 |    ├── index.html
 |    ├── style.css
 |    ├── script.js
@@ -101,7 +107,8 @@ frontend-project-lab/
 | 4     |  Password-Generator     |  
 |5,6,7,8|  Quiz App               | 
 | 9 ,10 |  Calculator             |
-|11 ,12 |  Weather-App            |
+| 11 ,12|  Weather-App            |
+| 13    | Notes-App               |
 
 
 
