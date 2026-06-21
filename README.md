@@ -100,15 +100,15 @@ frontend-project-lab/
 
 ### Week 1 – JavaScript
 
-| Day   | Project                 |
-| ---   | ----------------------- |
-| 1 -2  | Todo App                |
-| 3     | Color-Palatte-Generator |
-| 4     |  Password-Generator     |  
-|5,6,7,8|  Quiz App               | 
-| 9 ,10 |  Calculator             |
-| 11 ,12|  Weather-App            |
-| 13    | Notes-App               |
+| Day      | Project                 |
+| -------- | ----------------------- |
+| 1 -2     | Todo App                |
+| 3        | Color-Palatte-Generator |
+| 4        |  Password-Generator     |  
+|5,6,7,8   |  Quiz App               | 
+| 9 ,10    |  Calculator             |
+| 11 ,12   |  Weather-App            |
+| 13,14    | Notes-App               |
 
 
 
