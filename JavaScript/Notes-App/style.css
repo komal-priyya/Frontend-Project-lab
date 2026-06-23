@@ -1,0 +1,16 @@
+.notesCard{
+    background-color: antiquewhite;
+    color:black;
+    width:300px;
+
+}
+
+.notesDiv{
+    background-color: rgb(102, 196, 165);
+    border:10px
+    
+
+}
+.description-field{
+    /* height:100px */
+}
