@@ -59,33 +59,38 @@ frontend-project-lab/
 |    ├── index.html
 |    ├── style.css
 |    ├── script.js
-    
-│   ├──ColorPalatte-Generator/
+|  | 
+│  ├──ColorPalatte-Generator/
 |    ├── index.html
 |    ├── style.css
 |    ├── script.js
-|    |
-|   ├── Password-Generator/
+|  |
+|  ├── Notes-App/
 |    ├── index.html
 |    ├── style.css
 |    ├── script.js
-|    |
-|   ├── Quiz-App/
+|  |
+|  ├── Password-Generator/
 |    ├── index.html
 |    ├── style.css
 |    ├── script.js
-|    |
-|   ├── Todo-App/
+|  |
+|  ├── Quiz-App/
 |    ├── index.html
 |    ├── style.css
 |    ├── script.js
-|    |
-|   ├── Weather-App/
+|  |
+|  ├── Todo-App/
 |    ├── index.html
 |    ├── style.css
 |    ├── script.js
-|    | 
-|   ├── Notes-App/
+|  |
+|  ├── Weather-App/
+|    ├── index.html
+|    ├── style.css
+|    ├── script.js
+|  | 
+|  ├── Notes-App/
 |    ├── index.html
 |    ├── style.css
 |    ├── script.js
@@ -108,7 +113,7 @@ frontend-project-lab/
 |5,6,7,8   |  Quiz App               | 
 | 9 ,10    |  Calculator             |
 | 11 ,12   |  Weather-App            |
-| 13,14    | Notes-App               |
+| 13,14 ,15| Notes-App               |
 
 
 
