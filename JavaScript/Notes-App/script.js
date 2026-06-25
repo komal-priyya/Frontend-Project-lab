@@ -79,7 +79,3 @@ createNoteCard(note)
 })
 
 
-
-
-   
-

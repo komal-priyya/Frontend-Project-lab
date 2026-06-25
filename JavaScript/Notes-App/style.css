@@ -37,3 +37,6 @@
 .description-field{
     /* height:100px */
 }
+.menu{
+   display: none;
+}
