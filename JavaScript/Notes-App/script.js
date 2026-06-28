@@ -21,10 +21,35 @@ function  createNoteCard(note){
     title.innerText = `Title : ${note.title}`;
     description.innerText = `Description : ${note.description}`
     const btn = document.createElement("button")
+    const menu = document.createElement("div")
+    const editbtn= document.createElement("button")
+    const Deletebtn= document.createElement("button")
+    menu.classList.add("menu")
+    editbtn.classList.add("editbtn")
+    Deletebtn.classList.add("deletebtn")
+      editbtn.innerText="Edit"
+    Deletebtn.innerText="Delete"
+    menu.append(editbtn,Deletebtn)
+  
 
-    notesDiv.append(title, description, dotbutton)
+    notesDiv.append(title, description, dotbutton,menu)
     const notesbox = document.querySelector(".notes-box")
-    notesbox.append(notesDiv)
+    notesbox.append(notesDiv) 
+
+
+
+
+    dotbutton.addEventListener("click",()=>{
+        if(menu.style.display=="none" ||  menu.style.display === ""){
+            menu.style.display="block"
+            console.log("first")
+        }
+        else{
+            menu.style.display="none"
+        }
+    })
+
+
 }
 
 let savedNotes = JSON.parse(localStorage.getItem("notes"));
