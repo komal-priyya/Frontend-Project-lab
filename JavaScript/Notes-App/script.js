@@ -42,15 +42,40 @@ function  createNoteCard(note){
     dotbutton.addEventListener("click",()=>{
         if(menu.style.display=="none" ||  menu.style.display === ""){
             menu.style.display="block"
-            console.log("first")
         }
         else{
             menu.style.display="none"
         }
     })
+    Deletebtn.addEventListener("click", ()=>{
+notesDiv.remove();
 
+    let savednotes = JSON.parse(localStorage.getItem("notes")) || [];
+
+savednotes = savednotes.filter(n => n.id !== note.id);
+    localStorage.setItem("notes", JSON.stringify(savednotes));
+
+    })
+editbtn.addEventListener("click", ()=>{
+
+   
+    if(editbtn.innerText=="Edit"){
+        editbtn.innerText="Save"
+        console.log("tfirst")
+    }else{
+        editbtn.innerText="Edit"
+        console.log("first")
+    }
+
+    
+
+})
 
 }
+
+
+
+
 
 let savedNotes = JSON.parse(localStorage.getItem("notes"));
 // let savedNotes = JSON.parse(localStorage.getItem("notes"));
@@ -85,6 +110,7 @@ if(savedNotes){
 }
 
 let note = {
+     id: Date.now(),
     title: titlefield.value,
     description: descriptionfield.value,
 }
