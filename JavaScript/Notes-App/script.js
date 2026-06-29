@@ -1,12 +1,25 @@
+
+let editingId = null;
 const addBtn = document.querySelector(".add-btn")
 
-
+const notesbox = document.querySelector(".notes-box");
 const titlefield = document.querySelector(".title-field")
 const descriptionfield = document.querySelector(".description-field")
 
 function  createNoteCard(note){
  const notesDiv = document.createElement("div")
     notesDiv.classList.add("noteCard");
+//     const colors = [
+//     "#FFE082",
+//     "#FFCCBC",
+//     "#C8E6C9",
+//     "#BBDEFB",
+//     "#E1BEE7",
+//     "#F8BBD0"
+// ];
+
+// notesDiv.style.background =
+//     colors[Math.floor(Math.random() * colors.length)];
 
     const title = document.createElement("span")
     // title.innerText="title"
@@ -33,7 +46,7 @@ function  createNoteCard(note){
   
 
     notesDiv.append(title, description, dotbutton,menu)
-    const notesbox = document.querySelector(".notes-box")
+   
     notesbox.append(notesDiv) 
 
 
@@ -57,19 +70,20 @@ savednotes = savednotes.filter(n => n.id !== note.id);
 
     })
 editbtn.addEventListener("click", ()=>{
+  titlefield.value = note.title;
+    descriptionfield.value = note.description;
 
+    editingId = note.id;
+
+    addBtn.innerText = "Save";
    
-    if(editbtn.innerText=="Edit"){
-        editbtn.innerText="Save"
-        console.log("tfirst")
-    }else{
-        editbtn.innerText="Edit"
-        console.log("first")
-    }
-
+   
+    
     
 
-})
+    }
+
+)
 
 }
 
@@ -86,47 +100,52 @@ if(savedNotes){
     }
 }
 
+
+
+
+
 addBtn.addEventListener("click", () => {
 
-    if (titlefield.value.trim() == '' || descriptionfield.value.trim() == '') {
+    if (titlefield.value.trim() === "" || descriptionfield.value.trim() === "") {
         return;
     }
-let notes ;
 
+    let notes = JSON.parse(localStorage.getItem("notes")) || [];
 
-// let savedNotes =JSON.parse(localStorage.getItem("notes"))
+    if (editingId === null) {
 
+        let note = {
+            id: Date.now(),
+            title: titlefield.value,
+            description: descriptionfield.value
+        };
 
+        notes.push(note);
 
+        localStorage.setItem("notes", JSON.stringify(notes));
 
+        createNoteCard(note);
 
+    } else {
 
+        notes = notes.map(note => {
+            if (note.id === editingId) {
+                note.title = titlefield.value;
+                note.description = descriptionfield.value;
+            }
+            return note;
+        });
 
-if(savedNotes){
-    notes=savedNotes;
-    console.log(notes)
-}else{
-    notes=[]
-}
+        localStorage.setItem("notes", JSON.stringify(notes));
 
-let note = {
-     id: Date.now(),
-    title: titlefield.value,
-    description: descriptionfield.value,
-}
+        location.reload();
 
-notes.push(note)
-console.log(notes)
-localStorage.setItem("notes", JSON.stringify(notes))
+        editingId = null;
+        addBtn.innerText = "Add";
+    }
 
-createNoteCard(note)
-   
-
-    titlefield.value = ""
-    descriptionfield.value = ""
-
-
-
-})
+    titlefield.value = "";
+    descriptionfield.value = "";
+});
 
 
