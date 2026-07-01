@@ -57,43 +57,51 @@ frontend-project-lab/
 ├── Javascript/
 |  ├── Calculator/
 |    ├── index.html
-|    ├── style.css
 |    ├── script.js
+|    ├── style.css
 |  | 
 │  ├──ColorPalatte-Generator/
 |    ├── index.html
+|    ├── Script.js
 |    ├── style.css
+|  | 
+|  ├── Expense-Tracker/
+|    ├── assets/
+|        ├── deletebutton.webp
+|        ├── Expense.webp
+|    ├── index.html
 |    ├── script.js
+|    ├── style.css
 |  |
 |  ├── Notes-App/
 |    ├── index.html
-|    ├── style.css
 |    ├── script.js
+|    ├── style.css
 |  |
 |  ├── Password-Generator/
 |    ├── index.html
-|    ├── style.css
 |    ├── script.js
+|    ├── style.css
 |  |
 |  ├── Quiz-App/
 |    ├── index.html
-|    ├── style.css
 |    ├── script.js
+|    ├── style.css
 |  |
 |  ├── Todo-App/
 |    ├── index.html
-|    ├── style.css
 |    ├── script.js
+|    ├── style.css
 |  |
 |  ├── Weather-App/
 |    ├── index.html
-|    ├── style.css
 |    ├── script.js
+|    ├── style.css
 |  | 
 |  ├── Notes-App/
 |    ├── index.html
-|    ├── style.css
 |    ├── script.js
+|    ├── style.css
 
 
 
@@ -114,6 +122,7 @@ frontend-project-lab/
 |9 ,10                 |  Calculator             |
 |11 ,12                |  Weather-App            |
 |13,14 ,15,16,17,18,19 | Notes-App               |
+|20                    | Expense-Tracker         |
 
 
 
