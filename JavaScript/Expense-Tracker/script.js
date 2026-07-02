@@ -20,7 +20,7 @@ addBtn.addEventListener("click", ()=>{
         const categoryElement= document.createElement("span")
         const AmountElement= document.createElement("span")
 const deleteBtn = document.createElement("button")
-const deleteBtnImage= document.createAttribute("img")
+const deleteBtnImage= document.createElement("img")
 deleteBtnImage.src= "assets/deletebutton.webp"
 
 deleteBtn.appendChild(deleteBtnImage)
