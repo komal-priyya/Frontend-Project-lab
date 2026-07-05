@@ -32,7 +32,7 @@ AmountElement.innerText= Amount.value
 Expense.append(titleElement,dateElement,categoryElement,AmountElement,deleteBtn)
 console.log("first")
 const AllExpensesBox= document.querySelector(".all-Expenses")
-AllExpensesBox.append(Expense)
+AllExpensesBox.append(Expense)       
 
 
 })
