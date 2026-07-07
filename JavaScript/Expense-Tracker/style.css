@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f8;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    padding: 30px;
+}
+
+.container > div:first-child {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.container h1 {
+    font-size: 26px;
+    color: #1e293b;
+}
+
+.container h3 {
+    font-weight: 400;
+    color: #64748b;
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+.add-Expense {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.add-Expense label {
+    font-size: 13px;
+    color: #334155;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.add-Expense input {
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.add-Expense input:focus {
+    border-color: #6366f1;
+}
+
+.add-btn {
+    margin-top: 18px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #6366f1;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.add-btn:hover {
+    background: #4f46e5;
+}
+
+.all-Expenses {
+    margin-top: 30px;
+}
+
+.all-Expenses img {
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.all-Expenses h1 {
+    display: inline-block;
+    font-size: 18px;
+    color: #1e293b;
+    vertical-align: middle;
+}
+
+.ExpsenseCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 10px;
+}
+
+.ExpsenseCard span {
+    font-size: 14px;
+    color: #334155;
+    flex: 1;
+    text-align: center;
+}
+
+.ExpsenseCard span:first-child {
+    text-align: left;
+    font-weight: 600;
+}
+
+.ExpsenseCard button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.ExpsenseCard button img {
+    width: 16px;
+}
