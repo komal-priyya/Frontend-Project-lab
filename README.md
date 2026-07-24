@@ -122,7 +122,7 @@ frontend-project-lab/
 |9 ,10                 |  Calculator             |
 |11 ,12                |  Weather-App            |
 |13,14 ,15,16,17,18,19 | Notes-App               |
-|20,21                 | Expense-Tracker         |
+|20,21,22              | Expense-Tracker         |
 
 
 
